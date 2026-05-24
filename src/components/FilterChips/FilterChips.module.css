@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+  align-items: center;
+}
+
+.resultCount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 4px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-chip);
+  color: var(--text-chip);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  animation: chipAppear 0.2s ease-out;
+}
+
+.chipLabel {
+  line-height: 1;
+}
+
+.chipRemove {
+  margin-left: 6px;
+  cursor: pointer;
+  color: var(--text-chip);
+  border: none;
+  background: none;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.chipRemove:hover {
+  color: var(--accent-hover);
+}
+
+.clearAll {
+  font-size: 13px;
+  color: var(--danger);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-left: 4px;
+  transition: text-decoration 0.15s ease;
+}
+
+.clearAll:hover {
+  text-decoration: underline;
+}
+
+@keyframes chipAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .resultCount {
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
