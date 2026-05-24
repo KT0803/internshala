@@ -1,0 +1,115 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-skeleton) 25%, var(--bg-skeleton-shine) 50%, var(--bg-skeleton) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  border-radius: 6px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.titleBlock {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleBar {
+  height: 16px;
+  width: 55%;
+  margin-bottom: 8px;
+}
+
+.companyBar {
+  height: 13px;
+  width: 35%;
+}
+
+.tagsRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tagBar {
+  height: 22px;
+  width: 110px;
+  border-radius: 20px;
+}
+
+.tagBarShort {
+  height: 22px;
+  width: 80px;
+  border-radius: 20px;
+}
+
+.infoRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-separator);
+}
+
+.infoBar {
+  height: 32px;
+  width: 100px;
+  border-radius: 6px;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-separator);
+}
+
+.postedBar {
+  height: 20px;
+  width: 70px;
+  border-radius: 4px;
+}
+
+.applyBar {
+  height: 14px;
+  width: 120px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .infoRow {
+    gap: 16px;
+  }
+
+  .infoBar {
+    width: 80px;
+    height: 28px;
+  }
+}
